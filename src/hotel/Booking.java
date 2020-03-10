@@ -1,5 +1,6 @@
 package hotel;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -83,21 +84,17 @@ public class Booking {
    //Set Discount
     public void setDiscount(Discount discount) {this.discount = discount;}
     
+    //Calculate the amount of nights booked
     public int getStayNights() {
         return (int) (checkOutDate.getTime() - checkInDate.getTime()) / 1000 / 60 / 60 / 24;
     }
-    /**
-     * Initialize the check-in and check-out dates.
-     * 
-     * @param daysFromNow
-     *            Number of days the stay will begin from now
-     * @param nights
-     *            Length of the stay in number of nights
-     */
+    
+    //Set up checkindate and checkoutdate to use calendar method
     public final void setReservationDates(int days, int nights) {
+    	//DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd"); //Creating a date format for dates displayed
         Calendar refDate = Calendar.getInstance();
         refDate.set(refDate.get(Calendar.YEAR), refDate.get(Calendar.MONTH), refDate.get(Calendar.DAY_OF_MONTH)
-                + days, 0, 0, 0);
+                + days);
         this.checkInDate = refDate.getTime();
         refDate.add(Calendar.DAY_OF_MONTH, nights);
         this.checkOutDate = refDate.getTime();
