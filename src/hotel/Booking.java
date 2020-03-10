@@ -1,6 +1,7 @@
 package hotel;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -56,7 +57,7 @@ public class Booking {
     public Date getCheckInDate() {return checkInDate;}
     
    //Set Check In Date
-    public void setCheckInDate(Date checkInDate) {this.checkInDate = checkInDate;}
+    public void setCheckInDate(Date datetime) {this.checkInDate = datetime;}
     
    //Get Check Out Date
     public Date getCheckOutDate() {return checkOutDate;}
@@ -82,18 +83,36 @@ public class Booking {
    //Set Discount
     public void setDiscount(Discount discount) {this.discount = discount;}
     
-
-   
+    public int getStayNights() {
+        return (int) (checkOutDate.getTime() - checkInDate.getTime()) / 1000 / 60 / 60 / 24;
+    }
+    /**
+     * Initialize the check-in and check-out dates.
+     * 
+     * @param daysFromNow
+     *            Number of days the stay will begin from now
+     * @param nights
+     *            Length of the stay in number of nights
+     */
+    public final void setReservationDates(int days, int nights) {
+        Calendar refDate = Calendar.getInstance();
+        refDate.set(refDate.get(Calendar.YEAR), refDate.get(Calendar.MONTH), refDate.get(Calendar.DAY_OF_MONTH)
+                + days, 0, 0, 0);
+        this.checkInDate = refDate.getTime();
+        refDate.add(Calendar.DAY_OF_MONTH, nights);
+        this.checkOutDate = refDate.getTime();
+    }
     //Constructor using @Params
-    public Booking(String id, Guest guest, Room room, Employee employee, Date checkInDate, Date checkOutDate, double roomRate, Discount discount) {
+    public Booking(String id, Guest guest, Room room, Employee employee, int days, int nights, double roomRate, Discount discount) {
         this.id = id;
         this.guest = guest;
         this.room = room;
         this.employee = employee;
-        this.checkInDate = checkInDate;
-        this.checkOutDate = checkOutDate;
+       // this.checkInDate = checkInDate;
+        //this.checkOutDate = checkOutDate;
         this.roomRate = roomRate;
         this.discount = discount;
+        setReservationDates(days, nights);
     }
     
     

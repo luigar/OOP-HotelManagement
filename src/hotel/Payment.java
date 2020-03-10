@@ -136,8 +136,8 @@ public class Payment {
 	      System.out.println("Employee Phone : "+booking.getEmployee().getPhoneNumber());
 	      
 	      System.out.println("\n============Room Info=================\n");
-	      System.out.println("CheckIn Date : "+booking.getCheckInDate().toString());
-	      System.out.println("CheckOut Date : "+booking.getCheckOutDate().toString());
+	      System.out.println("CheckIn Date : "+booking.getCheckInDate());
+	      System.out.println("CheckOut Date : "+booking.getCheckOutDate());
 	      System.out.println("");
 	      System.out.println("Room Number : "+booking.getRoom().getRoomNumber());
 	      System.out.println("Suite : "+booking.getRoom().isSuite());
