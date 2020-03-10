@@ -85,7 +85,7 @@ public class Booking {
     public void setDiscount(Discount discount) {this.discount = discount;}
     
     //Calculate the amount of nights booked
-    public int getStayNights() {
+    public int getTotalNights() {
         return (int) (checkOutDate.getTime() - checkInDate.getTime()) / 1000 / 60 / 60 / 24;
     }
     
@@ -94,7 +94,7 @@ public class Booking {
     	//DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd"); //Creating a date format for dates displayed
         Calendar refDate = Calendar.getInstance();
         refDate.set(refDate.get(Calendar.YEAR), refDate.get(Calendar.MONTH), refDate.get(Calendar.DAY_OF_MONTH)
-                + days);
+                - days);
         this.checkInDate = refDate.getTime();
         refDate.add(Calendar.DAY_OF_MONTH, nights);
         this.checkOutDate = refDate.getTime();

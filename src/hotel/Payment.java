@@ -138,7 +138,7 @@ public class Payment {
 	      System.out.println("\n============Room Info=================\n");
 	      System.out.println("CheckIn Date : "+booking.getCheckInDate());
 	      System.out.println("CheckOut Date : "+booking.getCheckOutDate());
-	      System.out.println("Days Reserved/Booked : "+booking.getStayNights());
+	      System.out.println("Days Reserved/Booked : "+booking.getTotalNights());
 	      System.out.println("");
 	      System.out.println("Room Number : "+booking.getRoom().getRoomNumber());
 	      System.out.println("Suite : "+booking.getRoom().isSuite());
