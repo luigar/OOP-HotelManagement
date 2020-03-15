@@ -29,7 +29,7 @@ public class Employee extends Person implements Comparable<Employee>{
 	   //Set SIN
 	    public void setSin(String sin) {this.sin = sin;}
 	    
-	    //Get Date of Birth
+	    //Get Date of Birth0
 	    public Date getDOB() {return dob;}
 	     
 	    //Set Date of Birth

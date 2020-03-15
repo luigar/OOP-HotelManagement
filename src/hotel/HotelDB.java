@@ -67,7 +67,7 @@ public class HotelDB {
 		 
 		 	//Create Employee Data
 	        Employee employee1 = new Employee("999-999-999",new Date(92,12,28),"E001","Luis", "Garcia", "3 Armada Court", "E1A 0A3", "Moncton", Province.NEW_BRUNSWICK, "5065064545", "test01@gmail.com");    
-	        Employee employee2 = new Employee("999-985-949",new Date(92,12,28),"E002","Miguel", "Eduardo", "1111 Main Street", "E1A 0K9", "Moncton", Province.NEW_BRUNSWICK, "5075064545", "test02@gmail.com");
+	        Employee employee2 = new Employee("999-985-949",new Date(1992,12,28),"E002","Miguel", "Eduardo", "1111 Main Street", "E1A 0K9", "Moncton", Province.NEW_BRUNSWICK, "5075064545", "test02@gmail.com");
 	        Employee employee3 = new Employee("999-999-999",new Date(85,03,13),"E003","Melissa", "Custodio", "1234 Mountain Road", "E1A 0J2", "Yellowknife", Province.NORTHERN_TERRITORIES, "5085064545", "test03@gmail.com");
 	        Employee employee4 = new Employee("989-999-999",new Date(96,01,24),"E004","Virginia", "DelCarmen", "23 Elmwood Drive", "E1A 1X3", "Whitehorse", Province.YUKON, "5095064545", "test04@gmail.com");
 	        Employee employee5 = new Employee("959-999-979",new Date(93,11,28),"E005","Gregorio", "Garcia", "76 Henessey Street", "E1A 2K7", "Saskatoon", Province.SASKATCHEWAN, "5105064545", "test05@gmail.com");
