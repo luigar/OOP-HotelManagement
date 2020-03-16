@@ -21,14 +21,22 @@ public class HotelDB {
 	 */
 	private List<Room> roomList = new ArrayList<Room>();
 	
-	public void addRoom(Room theRoom) {roomList.add(theRoom);
+	public void addRoom(Room theRoom) {
+		roomList.add(theRoom);
 	}
+	
 	//Get Room List
-    public List<Room> getRoomList() {return roomList;}
+    public List<Room> getRoomList() {
+    	return roomList;
+    	}
     //Set Room List
-    public void setRoomList(List<Room> roomList) {this.roomList = roomList;}
+    public void setRoomList(List<Room> roomList) {
+    	this.roomList = roomList;
+    	}
     
-    public void removeRoom(Room theRoom) {roomList.remove(theRoom);}
+    public void removeRoom(Room theRoom) {
+    	roomList.remove(theRoom);
+    	}
 
 	/**
 	 * 
@@ -36,13 +44,23 @@ public class HotelDB {
 	 */
     private List<Employee> employeeList = new ArrayList<Employee>();
     
-	public void addEmployee(Employee theEmployee) {employeeList.add(theEmployee);}
+	public void addEmployee(Employee theEmployee) {
+		employeeList.add(theEmployee);
+		}
+	
 	//Return employeeList
-    public List<Employee> getEmployeeList() {return employeeList;}
-  //Set Employee list
-    public void setEmployeeList(List<Employee> employeeList) {this.employeeList = employeeList;}
+    public List<Employee> getEmployeeList() {
+    	return employeeList;
+    	}
     
-    public void removeEmployee(Employee theEmploye) {employeeList.remove(theEmploye);}
+  //Set Employee list
+    public void setEmployeeList(List<Employee> employeeList) {
+    	this.employeeList = employeeList;
+    	}
+    
+    public void removeEmployee(Employee theEmploye) {
+    	employeeList.remove(theEmploye);
+    	}
     
 	/**
 	 * 
@@ -50,11 +68,17 @@ public class HotelDB {
 	 */
     private List<Guest> guestList = new ArrayList<Guest>();
     
-	public void addGuest(Guest theGuest) {guestList.add(theGuest);}	
+	public void addGuest(Guest theGuest) {
+		guestList.add(theGuest);
+		}	
 	
-	public List<Guest> getGuestList() {return guestList;}
+	public List<Guest> getGuestList() {
+		return guestList;
+		}
 
-	public void removeGuest(Guest theGuest) {guestList.remove(theGuest);}
+	public void removeGuest(Guest theGuest) {
+		guestList.remove(theGuest);
+		}
 	
 	public void displayGuest()
     {

@@ -119,7 +119,7 @@ public class Payment {
 	  {
 	      
 	  	//Set the id and payment type
-	  	this.id = id;
+	  	  this.id = id;
 	      this.paymentType = paymentType;
 	      booking = book;
 	      
